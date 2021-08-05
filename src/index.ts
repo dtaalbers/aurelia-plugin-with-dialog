@@ -1,6 +1,7 @@
 import { FrameworkConfiguration } from 'aurelia-framework';
 import { PLATFORM } from 'aurelia-pal';
 import { MyDialog } from './modals/my-dialog/my-dialog';
+import { ModalService } from './services/modal-service';
 
 export function configure(config: FrameworkConfiguration): void {
     config.globalResources([
@@ -16,6 +17,7 @@ export function configure(config: FrameworkConfiguration): void {
 }
 
 export {
-    MyDialog
+    MyDialog,
+    ModalService
 };
 

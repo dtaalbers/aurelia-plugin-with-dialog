@@ -1,20 +1,13 @@
-import { DialogService } from 'aurelia-dialog';
 import { autoinject } from 'aurelia-framework';
-import { MyDialog } from 'resources';
+import { ModalService } from 'resources';
 
 @autoinject()
 export class App {
-    public message = 'from Aurelia!';
-
     public constructor(
-        public dialogService: DialogService
+        public modalService: ModalService
     ) { }
 
-
-    clicked(): void {
-        this.dialogService.open({
-            viewModel: MyDialog
-        })
+    async clicked(): Promise<void> {
+        await this.modalService.dialog({});
     }
-
 }
